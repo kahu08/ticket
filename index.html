@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Ticket Pay</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" -->
+  <!-- integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Resource style -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style3.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <nav class="nav-bar" style="position:fixed; z-index:2">
+    <div class="nav-hold">
+      <div class="nav-menu" id="nav">&#0d0f0d;</div>
+      <div class="nav-logo">
+        <img class="logo" src="img/logoo.png" alt="logo" style="height: 100px; float: right;">
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid" style="padding-top:155px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/mm.jpeg" alt="Los Angeles" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="img/b.png" alt="Chicago" style="width:100%;">
+        </div>
+
+        <div class="item">
+          <img src="img/gn.png" alt="New york" style="width:100%;">
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div>
+
+
+  <!-- EVENTS -->
+  <section class="events text-center">
+    <div class="events__container container" id="events">
+      <div class="events__row row">
+        <h1 style="font-family: 'Bree Serif', serif; font-size: 60px; padding-top: 0px;">Events</h1>
+      </div>
+      <div class="events__catalog events__row row">
+
+        <div class="col-md-4 col-sm-6 col-lg-4 col-xs-6" v-for="event in events">
+          <article class="shop__item">
+            <header class="shop__header">
+              <img :src="event.image_url" alt="shop-item">
+
+              <div class="shop__overlay">
+                <div><span v-html="event.description"></span></div>
+              </div>
+
+
+            </header>
+            <div class="events__content">
+              <ul class="events__information list-unstyled row">
+                <li class="events__date col-xs-12" style="font-size:20px; color:black;">{{ event.from_date }} -> {{event.to_date}}</li>
+                <li class="events__place col-xs-12" style="font-size:20px; color:black;">{{ event.location }}</li>
+                <li class="events__category col-xs-12" style="font-size:20px; color:black;">{{ event.name }}</li>
+              </ul>
+            </div>
+
+            <div style="padding-left: 17px;">
+              <button type="button" class="btn btn-lg" data-toggle="modal" :data-target="`#${event.id}`" @click="showBuyModal(event)" class="w3-button cd-add-to-cart" style="background-color: #f4655a; z-index:2; color:white;">Buy Now
+                        </button>
+            </div>
+            <br/>
+
+            <div :id="event.id" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="background-color: #f9f9f9">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b>Ticket Options</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row ">
+                      <div class="col-md-7">
+                        <ul class="nav nav-tabs">
+                          <li class="active"><a href="#tab1" data-toggle="tab"><b>Tickets</b></a>
+                          </li>
+                          <!-- <li><a href="#tab2" data-toggle="tab"><b>Merchandises</b></a></li> -->
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="tab1">
+                            <div class="container-fluid">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Season</th>
+                                    <th>No.of Tickets</th>
+                                    <th>Ticket Option</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr v-for="option in event.options">
+                                    <td>{{ option.title }}</td>
+                                    <td>
+                                      <input type="number" v-model="option.quantity" class="no">
+                                    </td>
+                                    <td>
+                                      <select @change="selectTicket(event, option.title)" v-model="option.ticket_option_id" class="selectpicker" style="width: 100%;">
+                                                                        <option value="0">Select Option</option>
+                                                                        <option value="1"
+                                                                                :disabled="isOptionSoldOut(event, 1, option.title) || !hasTicketOption(event, 1, option.title)">
+                                                                            Regular - {{ ticketOptionPrice(event, 1,
+                                                                            option.title) }}
+                                                                        </option>
+                                                                        <option value="2"
+                                                                                :disabled="isOptionSoldOut(event, 2, option.title) || !hasTicketOption(event, 2, option.title)">
+                                                                            Vip - {{ ticketOptionPrice(event, 2,
+                                                                            option.title) }}
+                                                                        </option>
+                                                                        <option value="3"
+                                                                                :disabled="isOptionSoldOut(event, 3, option.title) || !hasTicketOption(event, 3, option.title)">
+                                                                            VVip - {{ ticketOptionPrice(event, 3,
+                                                                            option.title) }}
+                                                                        </option>
+                                                                    </select>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <button class="btn cd-add-to-cart" id="butt" type="button" style="background-color: #f4655a; cursor: pointer; " @click="addTicketsCart(event)" :data-price=event.amount>
+                                                Add to Cart
+                                            </button>
+                        <!--<a href="#0" @click="addTicketsCart(event)"-->
+                        <!--class="cd-add-to-cart"-->
+                        <!--:data-price=event.amount style="width:190px; height: 50px;">Add to-->
+                        <!--Cart</a>-->
+                        <!--</div>-->
+                      </div>
+
+                      <div class="col-md-5" style="border-left: 5px solid grey; line-height: 10px;">
+                        <ul class="nav nav-tabs">
+                          <li class="active"><a href="#tab3" data-toggle="tab"><b>Cart</b></a>
+                          </li>
+                        </ul>
+                        <div class="tab-pane" id="#tab3">
+
+
+                          <details v-for="cartItem in cartItems" style="padding-top: 20px; border-bottom: 1px solid #eee;">
+
+                            <summary class="font-display">{{ cartItem.name }} &emsp; &emsp; &emsp; &emsp; &emsp; Total: {{ formatMoney(getEventTotal(cartItem)) }}
+                            </summary>
+                            <br>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th style="border-right:1px solid black; margin-right: 5px;">
+                                    No.Tickets
+                                  </th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th style="border-right:1px solid black; margin-right: 5px;">
+                                    TicketOption
+                                  </th>
+                                  <!--<th>&nbsp;</th>-->
+                                  <th>&nbsp;</th>
+                                  <th style="border-right:1px solid black; margin-right: 5px;">
+                                    Amount
+                                  </th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>
+                                  </th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr v-for="(option, index) in cartItem.options" v-if="option.selected">
+                                  <td style="margin-left:5px;">{{ option.quantity }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td style="margin-left:5px;">{{ option.title }}, {{ ticketOptionTitle(option.ticket_option_id) }}</td>
+                                  <td>&nbsp;</td>
+                                  <td style="margin-left:5px;">{{ formatMoney(option.unit_price * option.quantity) }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <i class="fa fa-trash fa-2x" aria-hidden="true" @click="removeTicketOption(event, option)" id="delete"></i>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th style="border-right:1px solid black; margin-right: 5px;">
+                                    No.Merchandise
+                                  </th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+
+                                  <th>&nbsp;</th>
+                                  <th style="border-right:1px solid black; margin-right: 5px;">
+                                    Amount
+                                  </th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>
+                                  </th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr v-for="(merchandise, index) in cartItem.merchandises" v-if="merchandise.selected_quantity>0">
+                                  <td style="margin-left:5px;">{{ merchandise.name }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td style="margin-left:5px;">{{ merchandise.selected_quantity }}</td>
+                                  <td>&nbsp;</td>
+                                  <td style="margin-left:5px;">{{ formatMoney(merchandise.amount * merchandise.selected_quantity) }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>
+                                    <i class="fa fa-trash fa-2x" aria-hidden="true" @click="removeMerchandise(merchandise)" id="delete"></i>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </details>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- @click='addTicketsCart(event) -->
+                    <div class="modal-footer">
+                      <b style="float: left"><span><h3>TOTAL: {{ formatMoney(getTotal(event)) }}</h3></span></b>
+                      <button type="button" class="btn" data-dismiss="modal" style="background-color: #f4655a; color:white;">Continue
+                                            Shopping
+                                        </button>
+                      <button class="btn" type="button" @click="toggleCheckout" style="background-color: #f4655a; color:white;">
+                                            Checkout
+                                        </button>
+
+                      <div id="collapseExample" v-if="isCheckingOut" class="">
+                        <div class="card card-block">
+                          <div class="wrap" id="payment">
+                            <div class="form-container">
+                              <form class="form-group" id="mpesa">
+                                <!--<img src="img/mpesa.png" style="float:right;margin-right: -7%;">-->
+                                <div>
+                                  <input type="text" name="phone" value="" id="phone" placeholder="Enter Phone Number" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" v-model="checkoutPhone" data-error-message="Enter a valid number." />
+                                </div>
+                                <div>
+                                  <button class="btn w3-btn w3-round-large has-spinner btn-md" type="button" id="mpesa_donatee" id="payy" @click="checkout" :disabled="isCheckoutProcessing" style="background-color:#f4655a;  width:100px; text-align: center; margin-left:33%;margin-top:13px;"
+                                    onclick="">
+                                                                    <i v-if="isCheckoutProcessing"
+                                                                       class="fa fa-refresh fa-spin"></i>
+                                                                    Pay
+                                                                </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+          </article>
+
+          </div>
+
+          <!-- EVENT ITEM END -->
+
+        </div>
+        <div class="events__row row">
+          <div class="col-md-12">
+            <p class="btn btn--default btn--big">Show more</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- EVENTS END -->
+
+  <!-- SUBSCRIBE -->
+  <section class="subscribe text-center">
+    <div class="subscribe__container container">
+      <div class="subscribe__row row">
+        <div class="col-md-12">
+          <h2>Subscribe to get the latest events</h2>
+        </div>
+      </div>
+      <div class="subscribe__row row">
+        <div class="subscribe__form col-md-6 col-md-offset-3">
+          <form action="#" class="input-group">
+            <input type="email" placeholder="Your email" class="form-controls">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn--primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer container-fluid">
+    <div class="footer__container container">
+      <div class="footer__row row">
+
+
+        <!-- FOOTER NAVIGATION -->
+        <div class="footer__navigation col-md-12 col-lg-8">
+          <ul class="list-inline list-unstyled text-right text-uppercase">
+            <li>
+              <div id="contact">Contact</div>
+
+              <div id="contactForm">
+
+                <h1>Keep in touch!</h1>
+                <small>I'll get back to you as quickly as possible</small>
+
+                <form action="send-contact.php" class="contact-form" name="contact-form" method="post">
+      						<!-- <div class="row"> -->
+      							<div class="col-sm-6">
+      								<input type="text" name="name" required="required" placeholder="Name*">
+      							</div>
+      							<!-- <div class="col-sm-6"> -->
+      								<input type="email" name="email" required="required" placeholder="Email*">
+      							<!-- </div> -->
+      							<div class="col-sm-6">
+      								<input type="text" name="subject" placeholder="Subject">
+      							</div>
+
+      							<div class="col-sm-12">
+      								<textarea name="message" required cols="30" rows="7" placeholder="Message*"></textarea>
+      							</div>
+      							<div class="col-sm-12">
+      								<input type="submit" name="submit" value="Send Message" class="btn cd-add-to-cart">
+      							</div>
+      						<!-- </div> -->
+      					</form>
+              </div>
+            </li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy police</a></li>
+            <li><a href="tcs.html">Terms of service</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="www.twitter.com/nouvltd" class="fa fa-twitter"></a></li>
+            <!-- <li><a href="#" class="fa fa-linkedin"></a></li> -->
+            <!-- <h2>Powered by NOUVETA</h2> -->
+        </div>
+        <!-- FOOTER NAVIGATION END -->
+
+
+      </div>
+    </div>
+    <!-- COPYRIGHT -->
+    <div class="footer__copyright col-md-12 col-lg-4">
+      <span>&copy; 2017 Ticket Pay. All rights reserved</span>
+    </div>
+    <!-- COPYRIGHT END -->
+  </footer>
+  <!-- FOOTER END -->
+
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vuex@2.0.0"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <s000cript src="js/jspdf.min.js">
+    </script>
+    <script src="js/index.js"></script>
+    <script src="js/qr.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/merchandises.js"></script>
+
+    <script src="https://use.fontawesome.com/97ec197995.js"></script>
+    <!-- <script src="js/checkout.js"></script>
+ <script src="js/search.js"></script>-->
+    <script>
+      if (!window.jQuery) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>')
+    </script>
+    <!-- Resource jQuery -->
+
+</body>
+
+</html>

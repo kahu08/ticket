@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Ticket Pay</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__row row">
+
+                <!-- LOGO -->
+                <div class="header__logo col-xs-3">
+                    <a href="index.html">
+                        <svg width="133px" height="24px" viewBox="80 22 133 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <text id="logo" stroke="none" fill="none" font-family="Montserrat-Bold, Montserrat" font-size="20" font-weight="bold" letter-spacing="1.42857158">
+                                <tspan x="80" y="42" fill="#FFFFFF">TICKETPAY</tspan>
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+                <!-- LOGO END -->
+
+                <!-- NAVIGATION -->
+                <nav class="header__navigation text-right col-xs-9">
+
+                    <!-- MOBILE MENU -->
+                    <a href="#" class="header__mobile-navigation burger" id="burger"></a>
+                    <a href="#" class="header__mobile-navigation cart"></a>
+                    <!-- MOBILE MENU END -->
+
+                    <!-- GENERAL MENU -->
+                    <ul class="header__desktop-navigation list-inline list-unstyled" id="menu">
+                        <li><a href="#">Join Us</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#" class="cart">Cart</a></li>
+                    </ul>
+                    <!-- GENERAL MENU END -->
+
+                </nav>
+                <!-- NAVIGATION END -->
+
+            </div>
+            <div class="header__row row text-center">
+                <div class="header__form col-md-12">
+                    <h1>TicketPay</h1>
+                    <h2>One Stop shop for tickets for the latest events</h2>
+                    <form action="#">
+                        <fieldset>
+                            <input type="text" name="what" placeholder="What are you looking for?">
+                            <input type="text" name="location" placeholder="Location">
+                            <input type="text" name="from" placeholder="From">
+                            <input type="text" name="to" placeholder="To">
+                        </fieldset>
+                        <button type="submit" class="btn btn--primary btn--big">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- EVENTS -->
+        <section class="events text-center">
+            <div class="events__container container">
+                <div class="events__row row">
+                    <h1>Events</h1>
+                </div>
+                <div class="events__catalog events__row row">
+
+                  <div class="col-md-4">
+                      <article class="shop__item">
+                          <header class="shop__header">
+                              <img src="./img/events/slide1.jpg" alt="shop-item">
+
+                              <div class="shop__overlay">
+
+                                            <h1>Septembers End</h1>
+                                            <p> Featuring Murfy's Flaw,20 more days and Bany Bigos in a concert that will blow your mind. One of the finest bands in Kenya with contemporary sound and rock themes that will take you to a world ypou never knew existed.</p>
+                                            <p>Brought to you by Nairobi Showcase and Nairobi  underground, There will be free drinks for everyone dressed in the Bands merchandise so get shopping</p>
+                                            </div>
+
+
+
+                          </header>
+                          <div class="events__content">
+                              <ul class="events__information list-unstyled row">
+                                  <li class="events__date col-xs-12">1st June 2017 </li>
+                                  <li class="events__place col-xs-12">Ngong Race Course</li>
+                                  <li class="events__category col-xs-12">Blankets and wine</li>
+                              </ul>
+                          </div>
+                        <main>
+
+                          <a href="#0" class="cd-add-to-cart" data-price="25.99">Buy Now</a>
+                        </main>
+
+                        <div class="cd-cart-container empty">
+                          <a href="#0" class="cd-cart-trigger">
+                            Cart
+                            <ul class="count"> <!-- cart items count -->
+                              <li>0</li>
+                              <li>0</li>
+                            </ul> <!-- .count -->
+                          </a>
+
+                          <div class="cd-cart">
+                            <div class="wrapper">
+                              <header>
+                                <h2>Cart</h2>
+                                <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                              </header>
+
+                              <div class="body">
+                                <ul>
+                                  <!-- products added to the cart will be inserted here using JavaScript -->
+                                </ul>
+                              </div>
+
+                              <footer>
+                                <a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                              </footer>
+                            </div>
+                          </div> <!-- .cd-cart -->
+                        </div> <!-- cd-cart-container -->
+
+                                        <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/events/slide2.jpg" alt="shop-item">
+
+                                <div class="shop__overlay">
+                                  <h1>Blankets and Wine</h1>
+                                  <p> Brings to you A.K.A ,Fena Gitu, Sharaj, Kahvinya and many more. One of the finest bands in Kenya with contemporary sound and rock themes that will take you to a world ypou never knew existed.</p>
+                                  <p>MUSIC, FOOD, FASHION, PLAY, FAMILY at Ngong Race Course Water Front. There will be free drinks for everyone dressed in the Bands merchandise so get shopping</p>
+                              </div>
+
+
+                            </header>
+                            <div class="events__content">
+                                <ul class="events__information list-unstyled row">
+                                    <li class="events__date col-xs-12">1st June 2017 </li>
+                                    <li class="events__place col-xs-12">Ngong Race Course</li>
+                                    <li class="events__category col-xs-12">Blankets and wine</li>
+                                </ul>
+                            </div>
+                          <main>
+
+                            <a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a>
+                          </main>
+
+                          <div class="cd-cart-container empty">
+                            <a href="#0" class="cd-cart-trigger">
+                              Cart
+                              <ul class="count"> <!-- cart items count -->
+                                <li>0</li>
+                                <li>0</li>
+                              </ul> <!-- .count -->
+                            </a>
+
+                            <div class="cd-cart">
+                              <div class="wrapper">
+                                <header>
+                                  <h2>Cart</h2>
+                                  <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                                </header>
+
+                                <div class="body">
+                                  <ul>
+                                    <!-- products added to the cart will be inserted here using JavaScript -->
+                                  </ul>
+                                </div>
+
+                                <footer>
+                                  <a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                                </footer>
+                              </div>
+                            </div> <!-- .cd-cart -->
+                          </div> <!-- cd-cart-container -->
+
+                                          <!-- EVENT ITEM END -->
+
+
+                    <!-- EVENT ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/events/slide3.jpg" alt="shop-item">
+
+                                <div class="shop__overlay">
+                                  <h1>Word War 1</h1>
+                                  <p> Poetic Justice at its best. One of the finest poets in the country speaking to your soul. Music and judges....or how about you be the judge.</p>
+                                  <p>This is one of the finest forms of art that speaks to ones soul.....picking you up and taking you on a rollcoaster of thrill and reality in words that capture your spirit into magination</p>
+                              </div>
+
+
+                            </header>
+                            <div class="events__content">
+                                <ul class="events__information list-unstyled row">
+                                    <li class="events__date col-xs-12">1st June 2017 </li>
+                                    <li class="events__place col-xs-12">Ngong Race Course</li>
+                                    <li class="events__category col-xs-12">Blankets and wine</li>
+                                </ul>
+                            </div>
+                          <main>
+
+                            <a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a>
+                          </main>
+
+                          <div class="cd-cart-container empty">
+                            <a href="#0" class="cd-cart-trigger">
+                              Cart
+                              <ul class="count"> <!-- cart items count -->
+                                <li>0</li>
+                                <li>0</li>
+                              </ul> <!-- .count -->
+                            </a>
+
+                            <div class="cd-cart">
+                              <div class="wrapper">
+                                <header>
+                                  <h2>Cart</h2>
+                                  <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                                </header>
+
+                                <div class="body">
+                                  <ul>
+                                    <!-- products added to the cart will be inserted here using JavaScript -->
+                                  </ul>
+                                </div>
+
+                                <footer>
+                                  <a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                                </footer>
+                              </div>
+                            </div> <!-- .cd-cart -->
+                          </div> <!-- cd-cart-container -->
+
+                                          <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM END -->
+
+                </div>
+                <div class="events__catalog events__row row">
+
+                    <!-- EVENT ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/events/slide4.jpg" alt="shop-item">
+
+                                <div class="shop__overlay">
+                                  <h1>The PETEBOX</h1>
+                                  <p> Treehouse and Tribe proudly presents the PETEBOX straight from London. One of the finest artists in the world gracing the event for a once in a lifetime event in the archive world theme.</p>
+                                  <p>Feauturing Blinky Will and entertainment by Dj Eddie and Dj Stone spinning the turn table until it catches fire We party until the sun comes up </p>
+                              </div>
+
+                            </header>
+                            <div class="events__content">
+                                <ul class="events__information list-unstyled row">
+                                    <li class="events__date col-xs-12">1st June 2017 </li>
+                                    <li class="events__place col-xs-12">Ngong Race Course</li>
+                                    <li class="events__category col-xs-12">Blankets and wine</li>
+                                </ul>
+                            </div>
+                          <main>
+
+                            <a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a>
+                          </main>
+
+                          <div class="cd-cart-container empty">
+                            <a href="#0" class="cd-cart-trigger">
+                              Cart
+                              <ul class="count"> <!-- cart items count -->
+                                <li>0</li>
+                                <li>0</li>
+                              </ul> <!-- .count -->
+                            </a>
+
+                            <div class="cd-cart">
+                              <div class="wrapper">
+                                <header>
+                                  <h2>Cart</h2>
+                                  <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                                </header>
+
+                                <div class="body">
+                                  <ul>
+                                    <!-- products added to the cart will be inserted here using JavaScript -->
+                                  </ul>
+                                </div>
+
+                                <footer>
+                                  <a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                                </footer>
+                              </div>
+                            </div> <!-- .cd-cart -->
+                          </div> <!-- cd-cart-container -->
+
+                                          <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/events/slide5.jpg" alt="shop-item">
+
+                                <div class="shop__overlay">
+                                  <h1>ART RECYCLED</h1>
+                                  <p> The Owls Nest garden of Art proudly Presents Art for sale promoting our local artistes in Kenya. Creativity at its best people come see and promote our art.</p>
+                                  <p>Art of sale, music and fun and  will be free drinks for everyone dressed in the Bands merchandise so get shopping</p>
+                              </div>
+
+                            </header>
+                            <div class="events__content">
+                                <ul class="events__information list-unstyled row">
+                                    <li class="events__date col-xs-12">1st June 2017 </li>
+                                    <li class="events__place col-xs-12">Ngong Race Course</li>
+                                    <li class="events__category col-xs-12">Blankets and wine</li>
+                                </ul>
+                            </div>
+                          <main>
+
+                            <a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a>
+                          </main>
+
+                          <div class="cd-cart-container empty">
+                            <a href="#0" class="cd-cart-trigger">
+                              Cart
+                              <ul class="count"> <!-- cart items count -->
+                                <li>0</li>
+                                <li>0</li>
+                              </ul> <!-- .count -->
+                            </a>
+
+                            <div class="cd-cart">
+                              <div class="wrapper">
+                                <header>
+                                  <h2>Cart</h2>
+                                  <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                                </header>
+
+                                <div class="body">
+                                  <ul>
+                                    <!-- products added to the cart will be inserted here using JavaScript -->
+                                  </ul>
+                                </div>
+
+                                <footer>
+                                  <a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                                </footer>
+                              </div>
+                            </div> <!-- .cd-cart -->
+                          </div> <!-- cd-cart-container -->
+
+                                          <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM END -->
+
+                    <!-- EVENT ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/events/slide6.jpg" alt="shop-item">
+
+                                <div class="shop__overlay">
+                                  <h1>The Koroga Festival</h1>
+                                  <p> Capital Fm with many patners present The Koroga Festival with contemporary sound and rock themes that will take you to a world you never knew existed.</p>
+                                  <p>Brought to you by Nairobi Showcase and Nairobi  underground, There will be free drinks for everyone dressed in the Bands merchandise so get shopping</p>
+                                  </div>
+                            </header>
+                            <div class="events__content">
+                                <ul class="events__information list-unstyled row">
+                                    <li class="events__date col-xs-12">1st June 2017 </li>
+                                    <li class="events__place col-xs-12">Ngong Race Course</li>
+                                    <li class="events__category col-xs-12">Blankets and wine</li>
+                                </ul>
+                            </div>
+                          <main>
+
+                        		<a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a>
+                        	</main>
+
+                        	<div class="cd-cart-container empty">
+                        		<a href="#0" class="cd-cart-trigger">
+                        			Cart
+                        			<ul class="count"> <!-- cart items count -->
+                        				<li>0</li>
+                        				<li>0</li>
+                        			</ul> <!-- .count -->
+                        		</a>
+
+                        		<div class="cd-cart">
+                        			<div class="wrapper">
+                        				<header>
+                        					<h2>Cart</h2>
+                        					<span class="undo">Item removed. <a href="#0">Undo</a></span>
+                        				</header>
+
+                        				<div class="body">
+                        					<ul>
+                        						<!-- products added to the cart will be inserted here using JavaScript -->
+                        					</ul>
+                        				</div>
+
+                        				<footer>
+                        					<a href="#0" class="checkout btn"><em>Checkout - $<span>0</span></em></a>
+                        				</footer>
+                        			</div>
+                        		</div> <!-- .cd-cart -->
+                        	</div> <!-- cd-cart-container -->
+
+                                          <!-- EVENT ITEM END -->
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="events__row row">
+                    <div class="col-md-12">
+                        <a href="events.html" class="btn btn--default btn--big">Show more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- EVENTS END -->
+
+        <!-- MEMBESHIP -->
+        <section class="membership text-center">
+            <div class="membership__container container">
+                <div class="membership__row row">
+                    <div class="col-md-12">
+                        <h1>Join us</h1>
+                        <h2>For the opportunity to work with us </h2>
+                        <a href="#" class="btn btn--primary btn--big">Join now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- MEMBESHIP END -->
+
+        <!-- SHOP -->
+        <section class="shop text-center">
+            <div class="shop__container container">
+                <div class="shop__row row">
+                    <div class="col-md-12">
+                        <h1>Buy best goods of All Events</h1>
+                    </div>
+                </div>
+                <div class="shop__catalog shop__row row">
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold.jpg" alt="shop-item">
+                                <h1>Blankets and mats for Blankets and wine</h1>
+                                <div class="shop__overlay">
+                                    <h1>Blankets and mats for Blankets and wine</h1>
+                                    <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </header>
+                            <div class="shop__content">
+                                <ul class="shop__information list-unstyled row">
+                                    <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                    <li class="shop__category col-xs-12">Merchandise</li>
+                                </ul>
+                            </div>
+                            <footer class="shop__footer">
+                                <ul class="shop__buy">
+                                    <li><strong>Ksh 2,000</strong></li>
+                                    <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold1.png" alt="shop-item">
+                                <h1>Blankets and mats for Blankets and wine</h1>
+                                <div class="shop__overlay">
+                                    <h1>Blankets and mats for Blankets and wine</h1>
+                                    <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </header>
+                            <div class="shop__content">
+                                <ul class="shop__information list-unstyled row">
+                                    <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                    <li class="shop__category col-xs-12">Merchandise</li>
+                                </ul>
+                            </div>
+                            <footer class="shop__footer">
+                                <ul class="shop__buy">
+                                    <li><strong>Ksh 2,000</strong></li>
+                                    <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold2.png" alt="shop-item">
+                                <h1>Blankets and mats for Blankets and wine</h1>
+                                <div class="shop__overlay">
+                                    <h1>Blankets and mats for Blankets and wine</h1>
+                                    <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </header>
+                            <div class="shop__content">
+                                <ul class="shop__information list-unstyled row">
+                                    <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                    <li class="shop__category col-xs-12">Merchandise</li>
+                                </ul>
+                            </div>
+                            <footer class="shop__footer">
+                                <ul class="shop__buy">
+                                    <li><strong>Ksh 2,000</strong></li>
+                                    <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                </div>
+                <div class="shop__catalog shop__row row">
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold3.png" alt="shop-item">
+                                <h1>Blankets and mats for Blankets and wine</h1>
+                                <div class="shop__overlay">
+                                    <h1>Blankets and mats for Blankets and wine</h1>
+                                    <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </header>
+                            <div class="shop__content">
+                                <ul class="shop__information list-unstyled row">
+                                    <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                    <li class="shop__category col-xs-12">Merchandise</li>
+                                </ul>
+                            </div>
+                            <footer class="shop__footer">
+                                <ul class="shop__buy">
+                                    <li><strong>Ksh 2,000</strong></li>
+                                    <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold4.png" alt="shop-item">
+                                <h1>Sport equipment for active life from Sport Festival 2016</h1>
+                                <div class="shop__overlay">
+                                  <h1>Blankets and mats for Blankets and wine</h1>
+                                  <div class="shop__overlay">
+                                      <h1>Blankets and mats for Blankets and wine</h1>
+                                      <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                      <a href="#">Read more</a>
+                                  </div>
+                              </header>
+                              <div class="shop__content">
+                                  <ul class="shop__information list-unstyled row">
+                                      <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                      <li class="shop__category col-xs-12">Merchandise</li>
+                                  </ul>
+                              </div>
+                              <footer class="shop__footer">
+                                  <ul class="shop__buy">
+                                      <li><strong>Ksh 2,000</strong></li>
+                                      <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                  </ul>
+                              </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                    <!-- SHOP ITEM -->
+                    <div class="col-md-4">
+                        <article class="shop__item">
+                            <header class="shop__header">
+                                <img src="./img/shop/sold5.jpg" alt="shop-item">
+                                <h1>Blankets and mats for Blankets and wine</h1>
+                                <div class="shop__overlay">
+                                    <h1>Blankets and mats for Blankets and wine</h1>
+                                    <p> For This cream stylish mat with Blankets and Wine branding for gracing the Blankets and wine this 20th edition,grab yours today and get two bottles of Mascara, The Kenyan made wine absolutely free!!.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </header>
+                            <div class="shop__content">
+                                <ul class="shop__information list-unstyled row">
+                                    <li class="shop__place col-xs-12">Ngong Race Course</li>
+                                    <li class="shop__category col-xs-12">Merchandise</li>
+                                </ul>
+                            </div>
+                            <footer class="shop__footer">
+                                <ul class="shop__buy">
+                                    <li><strong>Ksh 2,000</strong></li>
+                                    <li class="text-right"><a href="#" class="btn btn--primary">Buy now</a></li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </div>
+                    <!-- SHOP ITEM END -->
+
+                </div>
+                <div class="shop__row row">
+                    <div class="col-md-12">
+                        <a href="#" class="btn btn--default btn--big">Show more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SHOP END -->
+
+        <!-- SUBSCRIBE -->
+        <section class="subscribe text-center">
+            <div class="subscribe__container container">
+                <div class="subscribe__row row">
+                    <div class="col-md-12">
+                        <h2>Subscribe to get the latest events</h2>
+                    </div>
+                </div>
+                <div class="subscribe__row row">
+                    <div class="subscribe__form col-md-6 col-md-offset-3">
+                        <form action="#" class="input-group">
+                            <input type="email" placeholder="Your email" class="form-control">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn--primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SUBSCRIBE END -->
+
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER -->
+    <footer class="footer container-fluid">
+        <div class="footer__container container">
+            <div class="footer__row row">
+
+                <!-- COPYRIGHT -->
+                <div class="footer__copyright col-md-12 col-lg-4">
+                    <span>&copy; 2017 Ticket Pay. All rights reserved</span>
+                </div>
+                <!-- COPYRIGHT END -->
+
+                <!-- FOOTER NAVIGATION -->
+                <div class="footer__navigation col-md-12 col-lg-8">
+                    <ul class="list-inline list-unstyled text-right text-uppercase">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Privacy police</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#" class="btn btn--primary visible-lg">Become a member</a></li>
+                    </ul>
+                </div>
+                <!-- FOOTER NAVIGATION END -->
+
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
+</script>
+<script src="js/cart.js"></script> <!-- Resource jQuery -->
+
+    <script>
+        var menu = document.getElementById("menu");
+        var burger = document.getElementById("burger");
+        burger.onclick = function() {
+            event.preventDefault();
+            if (menu.classList.contains("visible")) {
+                menu.classList.remove("visible");
+            } else {
+                menu.classList.add("visible");
+            }
+        }
+    </script>
+    <!-- SCRIPTS END -->
+
+
+</body>
+
+</html>
